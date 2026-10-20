@@ -1,4 +1,4 @@
-name: Testes de API
+name: Testes
 
 on:
   push:
@@ -25,3 +25,6 @@ jobs:
 
       - name: Validações SQL
         run: npm run test:sql
+
+      - name: Verificadores e trava do pacote Claude Code
+        run: npm run test:ia

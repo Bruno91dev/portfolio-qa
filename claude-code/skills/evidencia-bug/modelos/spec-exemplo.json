@@ -1,0 +1,26 @@
+{
+  "titulo": "BUG-001 — Total do pedido ignora o cupom ao trocar a forma de pagamento",
+  "saida": "../../123-BUG-001-total-sem-cupom.png",
+  "linhas": [
+    [
+      {
+        "titulo": "ANTES — Boleto, total com desconto",
+        "cor": "azul",
+        "legenda": "Etapa de pagamento com Boleto. O total mostra R$ 45,00, com o cupom BEMVINDO10.",
+        "imagem": "boleto.png",
+        "recorte": [0, 0, 900, 600],
+        "destaques": [{ "ret": [620, 410, 220, 40] }]
+      },
+      {
+        "titulo": "DEPOIS de trocar para Cartão — desconto sumiu",
+        "cor": "vermelho",
+        "legenda": "Só a forma de pagamento mudou. O total voltou para R$ 50,00; o resumo ainda cita o cupom.",
+        "imagem": "cartao.png",
+        "recorte": [0, 0, 900, 600],
+        "destaques": [{ "ret": [620, 410, 220, 40] }, { "ret": [620, 360, 220, 30], "cor": "azul" }]
+      }
+    ]
+  ],
+  "esperado": "o total continua em R$ 45,00 com qualquer forma de pagamento.",
+  "ambiente": "Loja Web 2.4.0 · tarefa-123 @ a1b2c3d"
+}

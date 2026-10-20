@@ -2,10 +2,11 @@
   "name": "portfolio-qa",
   "version": "1.0.0",
   "private": true,
-  "description": "Portfólio de QA: plano de testes, coleção Postman e consultas SQL",
+  "description": "Portfólio de QA: plano de testes, coleção Postman, consultas SQL e pacote de QA com Claude Code",
   "scripts": {
     "test:api": "newman run postman/serverest.postman_collection.json",
-    "test:sql": "node sql/executar-validacoes.mjs"
+    "test:sql": "node sql/executar-validacoes.mjs",
+    "test:ia": "node claude-code/testes/rodar-testes.mjs"
   },
   "devDependencies": {
     "newman": "^6.2.1"
